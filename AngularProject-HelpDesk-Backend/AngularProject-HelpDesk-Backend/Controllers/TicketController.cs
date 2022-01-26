@@ -8,11 +8,15 @@ using AngularProject_HelpDesk.Models;
 
 namespace AngularProject_HelpDesk.Controllers
 {
+
+    // API controller #1
     [Route("ticket")]
     [ApiController]
     public class TicketController : ControllerBase
     {
 
+        // METHODS
+        // calls to methods from Ticket class
         [HttpGet]
         public List<Ticket> GetAll()
         {

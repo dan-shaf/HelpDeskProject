@@ -6,6 +6,7 @@ namespace AngularProject_HelpDesk_Backend.Migrations
 {
     public partial class CreateTicket : Migration
     {
+        // function creates Ticket database
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -27,6 +28,7 @@ namespace AngularProject_HelpDesk_Backend.Migrations
                 });
         }
 
+        // function deletes Ticket database
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(

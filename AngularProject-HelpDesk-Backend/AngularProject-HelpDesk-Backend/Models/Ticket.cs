@@ -8,15 +8,17 @@ namespace AngularProject_HelpDesk.Models
 {
     public class Ticket
     {
+        // PARAMETERS
         public int id { get; set; }
         public string name { get; set; }
         public string description { get; set; }
-        public string status { get; set; }
+        public string status { get; set; }  // is ticket active, pending, or closed
         public bool favorite { get; set; }
-        public string useropened { get; set; }
-        public string userclosed { get; set; }
+        public string useropened { get; set; }  // name of user to open ticket  
+        public string userclosed { get; set; }  // name of user to close ticket
 
-
+        // METHODS
+        // function returns copy of List
         public static List<Ticket> GetAll()
         {
             using (TicketContext ctx = new TicketContext())
@@ -26,6 +28,7 @@ namespace AngularProject_HelpDesk.Models
             }
         }
 
+        // function adds one (1) given ticket to List, saves to Database
         public static Ticket Add(Ticket theticket)
         {
             using (TicketContext ctx = new TicketContext())
@@ -35,7 +38,8 @@ namespace AngularProject_HelpDesk.Models
                 return theticket;
             }
         }
-
+        
+        // function deletes one (1) ticket from Database
         public static bool Delete(int id)
         {
             using (TicketContext ctx = new TicketContext())
@@ -48,10 +52,15 @@ namespace AngularProject_HelpDesk.Models
             }
         }
     }
+
+    // this is a localhost server
     public class TicketContext : DbContext
     {
+        // PARAMETERS
         public DbSet<Ticket> Tickets { get; set; }
 
+        // METHODS
+        // function sets Databse
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;Database=helptickets;Integrated Security=SSPI;");
