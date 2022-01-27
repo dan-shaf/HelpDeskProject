@@ -16,7 +16,7 @@ namespace AngularProject_HelpDesk.Controllers
     {
 
         // METHODS
-        // calls to methods from Ticket class
+        // each function calls namesake methods from Ticket class
         [HttpGet]
         public List<Ticket> GetAll()
         {

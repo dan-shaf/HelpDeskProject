@@ -23,11 +23,14 @@ namespace AngularProject_HelpDesk_Backend.Migrations
 
             modelBuilder.Entity("AngularProject_HelpDesk.Models.Ticket", b =>
                 {
-                    b.Property<int>("id")
+                    // notes for given property
+                    b.Property<int>("id")       // builder b has ID of property integer
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("int");  // verify input
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1); // sets this integer ID to equivalent Database ID
+                    // this is useful to copy this database into another, example: a new database of all support personnel.
+                    // shared vars from current database to new database: ID, status, userclosed.
 
                     b.Property<string>("description")
                         .IsRequired()
