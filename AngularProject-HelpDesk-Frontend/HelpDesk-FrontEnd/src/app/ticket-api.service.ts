@@ -10,14 +10,14 @@ export class TicketApiService {
 	constructor(private http: HttpClient) { }
 
 	getAll(cb: any){
-		this.http.get<Ticket[]>('https://localhost:7233/ticket').subscribe(cb);
+		this.http.get<Ticket[]>('https://localhost:7052/ticket').subscribe(cb);
 	}
 
 	add(newticket: Ticket, cb: any){
-		this.http.post<Ticket[]>('https://localhost:7233/ticket', newticket).subscribe(cb);
+		this.http.post<Ticket[]>('https://localhost:7052/ticket', newticket).subscribe(cb);
 	}
 
 	delete(id: number, cb: any) {
-		this.http.delete(`https://localhost:7233/ticket?id=${id}`).subscribe(cb);
+		this.http.delete(`https://localhost:7052/ticket?id=${id}`).subscribe(cb);
 	}
 }

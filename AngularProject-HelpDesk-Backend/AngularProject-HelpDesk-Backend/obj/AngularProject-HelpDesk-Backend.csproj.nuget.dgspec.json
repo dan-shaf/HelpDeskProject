@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\source\\dan-shaf\\HelpDeskProject\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend.csproj": {}
+    "C:\\Users\\sjmis\\source\\repos\\HelpDeskProject\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend.csproj": {}
   },
   "projects": {
-    "C:\\source\\dan-shaf\\HelpDeskProject\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend.csproj": {
+    "C:\\Users\\sjmis\\source\\repos\\HelpDeskProject\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\source\\dan-shaf\\HelpDeskProject\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend.csproj",
+        "projectUniqueName": "C:\\Users\\sjmis\\source\\repos\\HelpDeskProject\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend.csproj",
         "projectName": "AngularProject-HelpDesk-Backend",
-        "projectPath": "C:\\source\\dan-shaf\\HelpDeskProject\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\source\\dan-shaf\\HelpDeskProject\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend\\obj\\",
+        "projectPath": "C:\\Users\\sjmis\\source\\repos\\HelpDeskProject\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend.csproj",
+        "packagesPath": "C:\\Users\\sjmis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sjmis\\source\\repos\\HelpDeskProject\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\sjmis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
