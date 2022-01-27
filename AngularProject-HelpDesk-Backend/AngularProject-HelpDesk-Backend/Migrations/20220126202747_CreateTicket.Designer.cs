@@ -38,7 +38,7 @@ namespace AngularProject_HelpDesk_Backend.Migrations
                     b.Property<bool>("favorite")
                         .HasColumnType("bit");
 
-                    b.Property<string>("name")
+                    b.Property<string>("userName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -46,11 +46,11 @@ namespace AngularProject_HelpDesk_Backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("userclosed")
+                    b.Property<string>("userClosed")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("useropened")
+                    b.Property<string>("userOpened")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

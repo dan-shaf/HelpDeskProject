@@ -12,13 +12,13 @@ namespace AngularProject_HelpDesk.Models
         public int id { get; set; }
         public string name { get; set; }
         public string description { get; set; }
-        public string status { get; set; }  // is ticket active, pending, or closed
+        public string status { get; set; }      // is Ticket active, pending, or closed.
         public bool favorite { get; set; }
-        public string useropened { get; set; }  // name of user to open ticket  
-        public string userclosed { get; set; }  // name of user to close ticket
+        public string useropened { get; set; }  // name of user to open Ticket.
+        public string userclosed { get; set; }  // name of user to close Ticket.
 
         // METHODS
-        // function returns copy of List
+        // function returns copy of List of Tickets.
         public static List<Ticket> GetAll()
         {
             using (TicketContext ctx = new TicketContext())
@@ -28,7 +28,7 @@ namespace AngularProject_HelpDesk.Models
             }
         }
 
-        // function adds one (1) given ticket to List, saves to Database
+        // function adds one (1) Ticket to List, saves Database, and returns Ticket.
         public static Ticket Add(Ticket theticket)
         {
             using (TicketContext ctx = new TicketContext())
@@ -39,13 +39,14 @@ namespace AngularProject_HelpDesk.Models
             }
         }
         
-        // function deletes one (1) ticket from Database
+        // function deletes one (1) Ticket from Database and returns true on success.
+        //    parses integer ID, creates and finds Ticket instance in Database by ID, removes ticket from Database, saves Database, and returns true on success.
         public static bool Delete(int id)
         {
             using (TicketContext ctx = new TicketContext())
             {
                 Ticket theticket = new Ticket();
-                theticket.id = id;
+                theticket.id = id;  // find 
                 ctx.Remove(theticket);
                 ctx.SaveChanges();
                 return true;
@@ -53,14 +54,14 @@ namespace AngularProject_HelpDesk.Models
         }
     }
 
-    // this is a localhost server
+    // function is a localhost server for the Ticket Database.
     public class TicketContext : DbContext
     {
         // PARAMETERS
         public DbSet<Ticket> Tickets { get; set; }
 
         // METHODS
-        // function sets Databse
+        // function sets Database
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;Database=helptickets;Integrated Security=SSPI;");

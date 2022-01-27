@@ -1,3 +1,4 @@
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCors(options =>
@@ -16,6 +17,7 @@ builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
 
+// functions call methods in app component
 // Configure the HTTP request pipeline.
 app.UseCors("LocalOriginsPolicy");
 
