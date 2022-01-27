@@ -1,0 +1,42 @@
+<div>
+    <h2>Create New Ticket</h2>
+    <table>
+        <tr>
+            <th>
+                Issue:
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <input type="text" [(ngModel)]="newticket.name">
+            </th>
+        </tr>
+        <tr>
+            <th>
+                Description:
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <textarea type="text" [(ngModel)]="newticket.description"></textarea>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                User:
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <input type="text" [(ngModel)]="newticket.useropened">
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <button (click)="addTicket()"> Submit Ticket</button>
+            </th>
+        </tr>
+    </table>
+     
+</div>
+

@@ -1,6 +1,6 @@
 <div>
     <ng-container *ngFor="let ticket of tickets">
-        {{ ticket.id }}<br />
+       {{ ticket.id }}<br />
         {{ ticket.name }}<br />
         {{ ticket.description }}<br />
         {{ ticket.status }}<br />
@@ -11,3 +11,6 @@
         <br />
     </ng-container>
 </div>
+
+
+<app-add-ticket (addticket)="addTicket($event)"></app-add-ticket>
