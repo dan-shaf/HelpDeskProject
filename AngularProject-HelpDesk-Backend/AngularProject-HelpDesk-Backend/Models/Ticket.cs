@@ -46,7 +46,7 @@ namespace AngularProject_HelpDesk.Models
             using (TicketContext ctx = new TicketContext())
             {
                 Ticket theticket = new Ticket();
-                theticket.id = id;  // find 
+                theticket.id = id;
                 ctx.Remove(theticket);
                 ctx.SaveChanges();
                 return true;
