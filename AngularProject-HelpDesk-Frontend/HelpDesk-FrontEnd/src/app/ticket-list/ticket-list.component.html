@@ -1,12 +1,14 @@
 <div>
     <ng-container *ngFor="let ticket of tickets">
-       {{ ticket.id }}<br />
-        {{ ticket.name }}<br />
-        {{ ticket.description }}<br />
-        {{ ticket.status }}<br />
-        {{ ticket.favorite }}<br />
-        {{ ticket.useropened }}<br />
-        {{ ticket.userclosed }}<br />
+        Ticket #: {{ ticket.id }}<br />
+   Issue: {{ ticket.name }}<br />
+   Description: {{ ticket.description }}<br />
+   Status: {{ ticket.status }}<br />
+   Favorite: {{ ticket.favorite }}<br />
+   User: {{ ticket.useropened }}<br />
+   Assigned to: {{ ticket.userclosed }}<br />
+
+   <app-ticket></app-ticket>
         <button (click)="deleteTicket(ticket.id)">Delete</button>
         <br />
     </ng-container>
