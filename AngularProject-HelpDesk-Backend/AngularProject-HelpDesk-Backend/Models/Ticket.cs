@@ -10,12 +10,12 @@ namespace AngularProject_HelpDesk.Models
     {
         // PARAMETERS
         public int id { get; set; }
-        public string name { get; set; }
+        public string userName { get; set; }
         public string description { get; set; }
         public string status { get; set; }      // is Ticket active, pending, or closed.
         public bool favorite { get; set; }
-        public string useropened { get; set; }  // name of user to open Ticket.
-        public string userclosed { get; set; }  // name of user to close Ticket.
+        public string userOpened { get; set; }  // name of user to open Ticket.
+        public string userClosed { get; set; }  // name of user to close Ticket.
 
         // METHODS
         // function returns copy of List of Tickets.
