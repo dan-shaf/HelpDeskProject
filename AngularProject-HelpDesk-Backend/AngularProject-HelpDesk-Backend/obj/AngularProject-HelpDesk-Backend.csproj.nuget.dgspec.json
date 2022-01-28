@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dans-LT\\Source\\Repos\\HelpDeskProject\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend.csproj": {}
+    "D:\\source\\dan-shaf\\HelpDeskProject\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dans-LT\\Source\\Repos\\HelpDeskProject\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend.csproj": {
+    "D:\\source\\dan-shaf\\HelpDeskProject\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dans-LT\\Source\\Repos\\HelpDeskProject\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend.csproj",
+        "projectUniqueName": "D:\\source\\dan-shaf\\HelpDeskProject\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend.csproj",
         "projectName": "AngularProject-HelpDesk-Backend",
-        "projectPath": "C:\\Users\\Dans-LT\\Source\\Repos\\HelpDeskProject\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend.csproj",
-        "packagesPath": "C:\\Users\\Dans-LT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dans-LT\\Source\\Repos\\HelpDeskProject\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend\\obj\\",
+        "projectPath": "D:\\source\\dan-shaf\\HelpDeskProject\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\source\\dan-shaf\\HelpDeskProject\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Dans-LT\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

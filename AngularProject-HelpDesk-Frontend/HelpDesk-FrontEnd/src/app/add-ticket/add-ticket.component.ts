@@ -8,6 +8,8 @@ import { Ticket } from '../ticket';
 })
 export class AddTicketComponent implements OnInit {
 
+  // PROPERTIES
+  // instance of Ticket for addTicket form
   newticket: Ticket = {
     id: 0,
     name: '',
@@ -17,15 +19,20 @@ export class AddTicketComponent implements OnInit {
     useropened: '',
     userclosed: 'unassigned'
   };
-
+  //   TOGGLES
   createTicketVisible: boolean = false;
 
+  //   OUTPUTS
   @Output() addticket: EventEmitter<Ticket> = new EventEmitter<Ticket>();
 
+  // METHODS
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  //   EMITTERS
+  // function adds current Ticket, hides the form for itself, sets default values of current Ticket
   addTicket() {
     this.addticket.emit(this.newticket);
     this.hideCreateTicket();
@@ -37,11 +44,11 @@ export class AddTicketComponent implements OnInit {
     this.newticket.userclosed = 'unassigned'
 
   }
+  // toggle functions for addTicket
   showCreateTicket() {
     this.createTicketVisible=true;
   }
   hideCreateTicket() {
     this.createTicketVisible=false;
   }
-
 }

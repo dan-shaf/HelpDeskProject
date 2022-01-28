@@ -9,8 +9,11 @@ import { TicketApiService } from '../ticket-api.service';
 })
 export class TicketListComponent implements OnInit {
 
+	// PROPERTIES
+	// Ticket List
 	tickets: Ticket[] = []
 
+	// METHODS
 	constructor(private ticketapi: TicketApiService) {
 		this.refreshList();
 	}
@@ -18,6 +21,7 @@ export class TicketListComponent implements OnInit {
 	ngOnInit(): void {
 	}
 
+	// function calls getAll, copies Ticket List to tickets 
 	refreshList() {
 		this.ticketapi.getAll(
 			(result: Ticket[]) => {
@@ -28,6 +32,7 @@ export class TicketListComponent implements OnInit {
 		);
 	}
 
+	// function adds current Ticket to List, refreshes Ticket List
 	addTicket(ticket: Ticket) {
 		this.ticketapi.add(ticket,
 			() => {
@@ -36,10 +41,17 @@ export class TicketListComponent implements OnInit {
 		)
 	}
 
-	editTicket(){
-
+	// TODO:	edit Ticket function
+	// function finds current Ticket by id, edits current Ticket, refreshes Ticket List
+	editTicket(id: number){
+		this.ticketapi.edit(id,
+			() => {
+				this.refreshList();
+			}
+		)
 	}
 
+	// function finds current Ticket by id, deletes current Ticket, refreshes Ticket List
 	deleteTicket(id: number) {
 		this.ticketapi.delete(id,
 			() => {
