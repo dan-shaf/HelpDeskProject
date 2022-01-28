@@ -8,13 +8,12 @@ namespace AngularProject_HelpDesk.Models
 {
     public class Ticket
     {
-        // PARAMETERS
+        // PROPERTIES
         public int id { get; set; }
         public string name { get; set; }
         public string description { get; set; }
         public string status { get; set; }      // is Ticket active, pending, or closed.
         public bool favorite { get; set; }
-        public List<string> comments { get; set; }
         public string useropened { get; set; }  // name of user to open Ticket.
         public string userclosed { get; set; }  // name of user to close Ticket.
 
@@ -69,7 +68,7 @@ namespace AngularProject_HelpDesk.Models
     // function is a localhost server for the Ticket Database.
     public class TicketContext : DbContext
     {
-        // PARAMETERS
+        // PROPERTIES
         public DbSet<Ticket> Tickets { get; set; }
 
         // METHODS

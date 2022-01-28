@@ -1,11 +1,20 @@
-<app-add-ticket (addticket)="addTicket($event)"></app-add-ticket>
+<button (click)="favTicket()" *ngIf="favTicketVisible">Show All</button>
+<button (click)="favTicket()" *ngIf="!favTicketVisible">Show Favorites Only</button>
 <div>
     <ng-container *ngFor="let ticket of tickets">
-
-   <app-ticket [ticket]="ticket" (deleteme)="deleteTicket($event)" (editme)="editTicket($event)"></app-ticket>
-        
-        <br />
+        <ng-container *ngIf="favTicketVisible; then thenBlock else elseBlock"></ng-container>
+            <ng-template #thenBlock>
+                <ng-container *ngIf="ticket.favorite">
+                <app-ticket [ticket]="ticket" (deleteme)="deleteTicket($event)" (editme)="editTicket($event)"></app-ticket>
+                <br />
+         </ng-container>
+        </ng-template>
+<ng-template #elseBlock>
+    <app-ticket [ticket]="ticket" (deleteme)="deleteTicket($event)" (editme)="editTicket($event)"></app-ticket>
+    <br />
+</ng-template>
     </ng-container>
 </div>
 
+<app-add-ticket (addticket)="addTicket($event)"></app-add-ticket>
 

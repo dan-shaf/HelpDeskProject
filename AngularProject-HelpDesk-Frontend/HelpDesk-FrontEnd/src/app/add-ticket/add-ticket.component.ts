@@ -8,6 +8,7 @@ import { Ticket } from '../ticket';
 })
 export class AddTicketComponent implements OnInit {
 
+  // PROPERTIES
   newticket: Ticket = {
     id: 0,
     name: '',
@@ -18,14 +19,19 @@ export class AddTicketComponent implements OnInit {
     userclosed: 'unassigned'
   };
 
+  //  TOGGLES
   createTicketVisible: boolean = false;
 
+  //  EMITTERS
   @Output() addticket: EventEmitter<Ticket> = new EventEmitter<Ticket>();
 
+  // METHODS
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  // function outputs new ticket
   addTicket() {
     this.addticket.emit(this.newticket);
     this.hideCreateTicket();
@@ -37,6 +43,7 @@ export class AddTicketComponent implements OnInit {
     this.newticket.userclosed = 'unassigned'
 
   }
+  // CreateTicket Toggle functions
   showCreateTicket() {
     this.createTicketVisible=true;
   }

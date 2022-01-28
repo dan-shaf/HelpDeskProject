@@ -2048,19 +2048,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sjmis\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sjmis\\source\\repos\\HelpDeskProject\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend.csproj",
+      "projectUniqueName": "C:\\source\\dan-shaf\\HelpDeskProject\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend.csproj",
       "projectName": "AngularProject-HelpDesk-Backend",
-      "projectPath": "C:\\Users\\sjmis\\source\\repos\\HelpDeskProject\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend.csproj",
-      "packagesPath": "C:\\Users\\sjmis\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sjmis\\source\\repos\\HelpDeskProject\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend\\obj\\",
+      "projectPath": "C:\\source\\dan-shaf\\HelpDeskProject\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\source\\dan-shaf\\HelpDeskProject\\AngularProject-HelpDesk-Backend\\AngularProject-HelpDesk-Backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\sjmis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

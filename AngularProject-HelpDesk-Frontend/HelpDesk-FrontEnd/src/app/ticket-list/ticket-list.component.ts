@@ -9,10 +9,12 @@ import { TicketApiService } from '../ticket-api.service';
 })
 export class TicketListComponent implements OnInit {
 
+	// PROPERTIES
 	tickets: Ticket[] = []
+	//	TOGGLES
+	favTicketVisible: boolean = false;
 
-	
-
+	// METHODS
 	constructor(private ticketapi: TicketApiService) {
 		this.refreshList();
 	}
@@ -20,6 +22,7 @@ export class TicketListComponent implements OnInit {
 	ngOnInit(): void {
 	}
 
+	// function refreshes the List
 	refreshList() {
 		this.ticketapi.getAll(
 			(result: Ticket[]) => {
@@ -30,6 +33,7 @@ export class TicketListComponent implements OnInit {
 		);
 	}
 
+	// Button functions
 	addTicket(ticket: Ticket) {
 		this.ticketapi.add(ticket,
 			() => {
@@ -53,4 +57,9 @@ export class TicketListComponent implements OnInit {
 			}
 		)
 	}
+
+	favTicket(){
+		this.favTicketVisible = !this.favTicketVisible;
+	}
+
 }
