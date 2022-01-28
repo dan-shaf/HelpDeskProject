@@ -44,7 +44,7 @@
             <tr>
                 <th></th>
                 <th align="left">Created by: <input type="text" [(ngModel)]="editticket.useropened"></th>
-                <th> Favorite: <input type="text" [(ngModel)]="editticket.favorite"></th>
+                <th> Favorite: <input type="checkbox" [(ngModel)]="editticket.favorite"></th>
             </tr>
             <tr>
                 <th colspan="3" align="left" height="100" valign="top">
@@ -52,11 +52,12 @@
                 </th>
             </tr>
             <tr>
-                <th></th>
+                <th>
+                    <button (click)="emitEditEvent()">Save Edits</button>
+                </th>
                 <th></th>
                 <th>Assigned to:<br><input type="text" [(ngModel)]="editticket.userclosed"></th>
             </tr>
-            
             
 
 

@@ -20,4 +20,8 @@ export class TicketApiService {
 	delete(id: number, cb: any) {
 		this.http.delete(`https://localhost:7052/ticket?id=${id}`).subscribe(cb);
 	}
+
+	edit(editticket: Ticket, cb: any){
+		this.http.put('https://localhost:7052/ticket', editticket).subscribe(cb);
+	}
 }

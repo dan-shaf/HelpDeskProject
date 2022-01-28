@@ -11,6 +11,8 @@ export class TicketListComponent implements OnInit {
 
 	tickets: Ticket[] = []
 
+	
+
 	constructor(private ticketapi: TicketApiService) {
 		this.refreshList();
 	}
@@ -36,14 +38,18 @@ export class TicketListComponent implements OnInit {
 		)
 	}
 
-	editTicket(){
-
-	}
-
 	deleteTicket(id: number) {
 		this.ticketapi.delete(id,
 			() => {
 				this.refreshList();
+			}
+		)
+	}
+
+	editTicket(ticket: Ticket){
+		this.ticketapi.edit(ticket,
+			() => {
+				this.refreshList()
 			}
 		)
 	}
