@@ -2,7 +2,7 @@
 <div>
     <ng-container *ngFor="let ticket of tickets">
 
-   <app-ticket [ticket]="ticket" (editme)="editTicket($event)" (deleteme)="deleteTicket($event)"></app-ticket>
+   <app-ticket [ticket]="ticket" (deleteme)="deleteTicket($event)"></app-ticket>
         
         <br />
     </ng-container>

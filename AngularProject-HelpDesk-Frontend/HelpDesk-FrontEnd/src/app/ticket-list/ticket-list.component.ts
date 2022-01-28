@@ -40,17 +40,7 @@ export class TicketListComponent implements OnInit {
 			}
 		)
 	}
-
-	// TODO:	edit Ticket function
-	// function finds current Ticket by id, edits current Ticket, refreshes Ticket List
-	editTicket(id: number){
-		this.ticketapi.edit(id,
-			() => {
-				this.refreshList();
-			}
-		)
-	}
-
+	
 	// function finds current Ticket by id, deletes current Ticket, refreshes Ticket List
 	deleteTicket(id: number) {
 		this.ticketapi.delete(id,
@@ -59,4 +49,16 @@ export class TicketListComponent implements OnInit {
 			}
 		)
 	}
+
+	// TODO:
+	// function finds current Ticket by id, edits current Ticket, refreshes Ticket List
+	/*
+	editTicket(id: number){
+		this.ticketapi.edit(id,
+			() => {
+				this.refreshList();
+			}
+		)
+	}
+	*/
 }
