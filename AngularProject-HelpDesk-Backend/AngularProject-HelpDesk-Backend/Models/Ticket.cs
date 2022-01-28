@@ -52,6 +52,9 @@ namespace AngularProject_HelpDesk.Models
                 return true;
             }
         }
+
+       
+
     }
 
     // function is a localhost server for the Ticket Database.

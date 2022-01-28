@@ -6,20 +6,20 @@ import { AppComponent } from './app.component';
 import { TicketListComponent } from './ticket-list/ticket-list.component';
 import { TicketComponent } from './ticket/ticket.component';
 import { AddTicketComponent } from './add-ticket/add-ticket.component';
-import { EditTicketComponent } from './edit-ticket/edit-ticket.component';
+
 
 @NgModule({
 	declarations: [
 		AppComponent,
   TicketListComponent,
   TicketComponent,
-  AddTicketComponent,
-  EditTicketComponent
+  AddTicketComponent
 	],
 	imports: [
 		BrowserModule,
 		FormsModule,
-		HttpClientModule
+		HttpClientModule,
+  
 	],
 	providers: [],
 	bootstrap: [AppComponent]

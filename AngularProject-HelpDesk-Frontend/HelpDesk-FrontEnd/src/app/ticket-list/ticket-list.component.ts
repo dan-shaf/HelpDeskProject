@@ -36,6 +36,10 @@ export class TicketListComponent implements OnInit {
 		)
 	}
 
+	editTicket(){
+
+	}
+
 	deleteTicket(id: number) {
 		this.ticketapi.delete(id,
 			() => {

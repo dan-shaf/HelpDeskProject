@@ -35,5 +35,6 @@ namespace AngularProject_HelpDesk.Controllers
         {
             return Ticket.Delete(id);
         }
+
     }
 }
