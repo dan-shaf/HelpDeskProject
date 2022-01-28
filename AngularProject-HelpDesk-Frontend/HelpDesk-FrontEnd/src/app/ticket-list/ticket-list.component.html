@@ -1,13 +1,11 @@
+<app-add-ticket (addticket)="addTicket($event)"></app-add-ticket>
 <div>
     <ng-container *ngFor="let ticket of tickets">
-        {{ ticket.id }}<br />
-        {{ ticket.name }}<br />
-        {{ ticket.description }}<br />
-        {{ ticket.status }}<br />
-        {{ ticket.favorite }}<br />
-        {{ ticket.useropened }}<br />
-        {{ ticket.userclosed }}<br />
-        <button (click)="deleteTicket(ticket.id)">Delete</button>
+
+   <app-ticket [ticket]="ticket" (deleteme)="deleteTicket($event)" (editme)="editTicket($event)"></app-ticket>
+        
         <br />
     </ng-container>
 </div>
+
+

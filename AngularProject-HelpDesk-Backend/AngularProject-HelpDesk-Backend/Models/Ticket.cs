@@ -14,6 +14,7 @@ namespace AngularProject_HelpDesk.Models
         public string description { get; set; }
         public string status { get; set; }      // is Ticket active, pending, or closed.
         public bool favorite { get; set; }
+        public List<string> comments { get; set; }
         public string useropened { get; set; }  // name of user to open Ticket.
         public string userclosed { get; set; }  // name of user to close Ticket.
 
@@ -52,6 +53,17 @@ namespace AngularProject_HelpDesk.Models
                 return true;
             }
         }
+
+        public static Ticket Edit(Ticket ticket)
+        {
+            using (TicketContext ctx = new TicketContext())
+            {
+                ctx.Update(ticket);
+                ctx.SaveChanges();
+                return ticket;
+            }
+        }
+
     }
 
     // function is a localhost server for the Ticket Database.

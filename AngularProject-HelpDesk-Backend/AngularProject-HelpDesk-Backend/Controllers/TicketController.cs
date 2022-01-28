@@ -35,5 +35,12 @@ namespace AngularProject_HelpDesk.Controllers
         {
             return Ticket.Delete(id);
         }
+
+        [HttpPut]
+        public Ticket EditTicket(Ticket ticket)
+        {
+            return Ticket.Edit(ticket);
+        }
+
     }
 }
