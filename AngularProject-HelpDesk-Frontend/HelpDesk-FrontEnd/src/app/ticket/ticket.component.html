@@ -1,17 +1,17 @@
 <div>
-<ng-container *ngIf="ticket">
-   
-    <table width="90%" align="center" border style="background-color: darkslateblue;">  
-        <thead>
+    <ng-container *ngIf="ticket">
+        <table width="90%" align="center" border style="background-color: darkslateblue;">  
+            <thead>
+                <tr>
+                    <th width="20%">Ticket #: {{ ticket.id }} </th>
+                    <th align="left" width="60%">Issue: {{ ticket.name }} </th>
+                    <th width="20%">Status:<br> {{ ticket.status }}</th>
+                </tr>
             <tr>
-                <th width="20%">Ticket #: {{ ticket.id }} </th>
-                <th align="left" width="60%">Issue: {{ ticket.name }} </th>
-                <th width="20%">Status:<br> {{ ticket.status }}</th>
-            </tr>
-            <tr>
-                <th><button (click)="showDetailsTicket()" *ngIf="!expandTicketVisible">Expand Details</button>
-                    
-                    <button (click)="hideDetailsTicket()" *ngIf="expandTicketVisible">Hide Details</button></th>
+                <th>
+                    <button (click)="showDetailsTicket()" *ngIf="!expandTicketVisible">Expand Details</button>
+                    <button (click)="hideDetailsTicket()" *ngIf="expandTicketVisible">Hide Details</button>
+                </th>
                 <th align="left">Created by: {{ ticket.useropened }} </th>
                 <th> Favorite: {{ ticket.favorite }}</th>
             </tr>
@@ -24,44 +24,38 @@
                 <th width="20%"><button (click)="emitDeleteEvent()">Delete</button></th>
                 <th width="60%">
                     <button (click)="showEditTicket()" *ngIf="!editTicketVisible">Edit Ticket</button>
-                    
                     <button (click)="hideEditTicket()"*ngIf="editTicketVisible">Cancel Edit</button>
                 </th>
                 <th width="20%">Assigned to:<br>{{ ticket.userclosed }}</th>
             </tr>
-            
         </thead>
     </table>
-
-<div *ngIf="editTicketVisible">
-    <table width="90%" align="center" border style="background-color: darkslateblue;">
-        <thead>
-            <tr>
-                <th width="20%">Ticket #: {{ ticket.id }} </th>
-                <th align="left">Issue: <textarea type="text" [(ngModel)]="editticket.name"></textarea></th>
-                <th>Status:<br><input type="text" [(ngModel)]="editticket.status"></th>
-            </tr>
-            <tr>
-                <th></th>
-                <th align="left">Created by: <input type="text" [(ngModel)]="editticket.useropened"></th>
-                <th> Favorite: <input type="checkbox" [(ngModel)]="editticket.favorite"></th>
-            </tr>
-            <tr>
-                <th colspan="3" align="left" height="100" valign="top">
+    <div *ngIf="editTicketVisible">
+        <table width="90%" align="center" border style="background-color: darkslateblue;">
+            <thead>
+                <tr>
+                    <th width="20%">Ticket #: {{ ticket.id }} </th>
+                    <th align="left">Issue: <textarea type="text" [(ngModel)]="editticket.name"></textarea></th>
+                    <th>Status:<br><input type="text" [(ngModel)]="editticket.status"></th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th align="left">Created by: <input type="text" [(ngModel)]="editticket.useropened"></th>
+                    <th> Favorite: <input type="checkbox" [(ngModel)]="editticket.favorite"></th>
+                </tr>
+                <tr>
+                    <th colspan="3" align="left" height="100" valign="top">
                     Description:<br><textarea type="text" [(ngModel)]="editticket.description"></textarea>
-                </th>
-            </tr>
-            <tr>
-                <th>
-                    <button (click)="emitEditEvent()">Save Edits</button>
-                </th>
-                <th></th>
-                <th>Assigned to:<br><input type="text" [(ngModel)]="editticket.userclosed"></th>
-            </tr>
-            
-
-
-        </thead>
-    </table></div>
-</ng-container>
-    </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <button (click)="emitEditEvent()">Save Edits</button>
+                    </th>
+                    <th></th>
+                    <th>Assigned to:<br><input type="text" [(ngModel)]="editticket.userclosed"></th>
+                </tr>
+            </thead>
+        </table></div>
+    </ng-container>
+</div>

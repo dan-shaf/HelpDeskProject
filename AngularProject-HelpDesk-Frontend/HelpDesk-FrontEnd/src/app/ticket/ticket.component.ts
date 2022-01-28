@@ -8,11 +8,14 @@ import { Ticket } from '../ticket';
 })
 export class TicketComponent implements OnInit {
 
+  // PROPERTIES
+  //  INPUTS
   @Input() ticket: Ticket | undefined = undefined;
-
+  //  OUTPUTS
   @Output() deleteme: EventEmitter<number> = new EventEmitter<number>();
   @Output() editme: EventEmitter<Ticket> = new EventEmitter<Ticket>();
 
+  // Ticket instance for EditTicket
   editticket: Ticket = {
 		id: 0,
 		name: '',
@@ -23,20 +26,24 @@ export class TicketComponent implements OnInit {
 		userclosed: 'unassigned'
 	};
 
+  //   TOGGLES
   editTicketVisible: boolean = false;
   expandTicketVisible: boolean = false;
 
+  // METHODS
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  //  EMITTERS
   emitDeleteEvent() {
     this.deleteme.emit(this.ticket?.id)
   }
   emitEditEvent() {
     this.editme.emit(this.editticket)
   }
+  // EditTicket Toggle functions
   showEditTicket() {
     if (this.ticket) {
       this.editticket.id = this.ticket.id;
@@ -52,6 +59,7 @@ export class TicketComponent implements OnInit {
   hideEditTicket() {
     this.editTicketVisible=false;
   }
+  // DetailsTicket Toggle functions
   showDetailsTicket() {
     this.expandTicketVisible=true;
   }
